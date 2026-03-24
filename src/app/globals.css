@@ -2,32 +2,39 @@
 
 body {
   background: #ffffff;
-  color: #18181b;
+  color: #1e293b;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
 }
 
-/* Балансировка заголовков — равномерные переносы */
 h1, h2 {
   text-wrap: balance;
 }
 
-/* Плавный скролл */
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
 }
 
-/* Уважаем настройки доступности */
 @media (prefers-reduced-motion: reduce) {
   .animate-float,
   .animate-pulse-glow,
-  .animate-gradient-text {
+  .animate-gradient-text,
+  .animate-cart-bounce {
     animation: none;
   }
 }
 
-/* Скрыть скроллбар на мобильных свайпах */
+/* Убрать стрелки у number input */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -36,7 +43,7 @@ html {
   display: none;
 }
 
-/* Анимированный градиент на тексте */
+/* Градиент на тексте */
 @keyframes gradient-shift {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -45,11 +52,11 @@ html {
 .animate-gradient-text {
   background: linear-gradient(
     135deg,
-    #0ea5e9,
-    #6366f1,
-    #ec4899,
-    #f97316,
-    #0ea5e9
+    #38bdf8,
+    #818cf8,
+    #f472b6,
+    #fb923c,
+    #38bdf8
   );
   background-size: 300% 300%;
   animation: gradient-shift 6s ease infinite;
@@ -58,7 +65,7 @@ html {
   -webkit-text-fill-color: transparent;
 }
 
-/* Плавающий элемент */
+/* Плавающий */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-12px); }
@@ -76,4 +83,28 @@ html {
 
 .animate-pulse-glow {
   animation: pulse-glow 4s ease-in-out infinite;
+}
+
+/* Bounce для иконки корзины */
+@keyframes cart-bounce {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.3); }
+  50% { transform: scale(0.9); }
+  70% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.animate-cart-bounce {
+  animation: cart-bounce 0.5s ease;
+}
+
+/* Появление с пружинкой */
+@keyframes pop-in {
+  0% { transform: scale(0); opacity: 0; }
+  70% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.animate-pop-in {
+  animation: pop-in 0.3s ease-out;
 }

@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Product } from "@/data/products";
+import AddToCartButton from "@/components/AddToCartButton";
 
 export default function ProductCard({ product }: { product: Product }) {
   return (
     <div className="group">
       <Link href={`/catalog/${product.id}`}>
-        <div className="relative mb-3 aspect-[4/5] overflow-hidden rounded-xl bg-zinc-100 md:mb-4 md:rounded-2xl">
+        <div className="relative mb-3 aspect-[4/5] overflow-hidden rounded-xl bg-sky-50 md:mb-4 md:rounded-2xl">
           <Image
             src={product.image}
             alt={product.name}
@@ -17,19 +18,17 @@ export default function ProductCard({ product }: { product: Product }) {
         </div>
       </Link>
       <div className="space-y-1">
-        <p className="text-xs text-zinc-400 md:text-sm">{product.category}</p>
+        <p className="text-xs text-slate-400 md:text-sm">{product.category}</p>
         <Link href={`/catalog/${product.id}`}>
-          <h3 className="text-sm font-medium text-zinc-900 md:text-base">
+          <h3 className="text-sm font-medium text-slate-800 md:text-base">
             {product.name}
           </h3>
         </Link>
         <div className="flex items-center justify-between pt-1">
-          <span className="text-sm font-bold md:text-base">
+          <span className="text-sm font-bold text-sky-700 md:text-base">
             {product.price.toFixed(2)} €
           </span>
-          <button className="cursor-pointer rounded-full bg-zinc-900 px-3.5 py-1.5 text-xs font-medium text-white transition-colors hover:bg-zinc-700 md:px-5 md:py-2 md:text-sm">
-            В корзину
-          </button>
+          <AddToCartButton product={product} />
         </div>
       </div>
     </div>

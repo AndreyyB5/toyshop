@@ -11,15 +11,15 @@ export default function AboutPage() {
           height={48}
         />
         <div>
-          <p className="text-xs font-medium tracking-widest text-zinc-400 uppercase">
+          <p className="text-xs font-medium tracking-widest text-sky-500 uppercase">
             О магазине
           </p>
-          <h1 className="text-2xl font-bold tracking-tight md:text-3xl">
+          <h1 className="text-2xl font-bold tracking-tight text-slate-800 md:text-3xl">
             ToyShop
           </h1>
         </div>
       </div>
-      <div className="space-y-4 text-sm leading-relaxed text-zinc-500 md:space-y-5 md:text-base">
+      <div className="space-y-4 text-sm leading-relaxed text-slate-500 md:space-y-5 md:text-base">
         <p>
           Мы — интернет-магазин качественных игрушек для детей всех возрастов.
           Каждый товар в нашем каталоге тщательно отобран, чтобы быть безопасным,

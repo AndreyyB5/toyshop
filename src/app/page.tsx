@@ -51,7 +51,7 @@ export default function Home() {
             <span className="animate-gradient-text">хочется расти</span>
           </h1>
 
-          <p className="mx-auto mb-8 max-w-md px-4 text-lg text-zinc-500 md:mb-10 md:text-xl">
+          <p className="mx-auto mb-8 max-w-md px-4 text-lg text-slate-500 md:mb-10 md:text-xl">
             Качественные и безопасные игрушки для детей всех возрастов.
             Доставка по всей Европе.
           </p>
@@ -59,13 +59,13 @@ export default function Home() {
           <div className="flex flex-col items-center gap-3 px-4 sm:flex-row sm:justify-center sm:gap-4">
             <Link
               href="/catalog"
-              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-zinc-900 px-8 py-3.5 text-base font-medium text-white transition-all hover:bg-zinc-700 hover:shadow-lg hover:shadow-zinc-900/20 sm:w-auto"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-sky-500 px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-sky-500/20 transition-all hover:bg-sky-600 hover:shadow-xl hover:shadow-sky-500/30 sm:w-auto"
             >
               Смотреть каталог →
             </Link>
             <Link
               href="/about"
-              className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-zinc-200 bg-white/80 px-8 py-3.5 text-base font-medium text-zinc-700 backdrop-blur-sm transition-all hover:border-zinc-300 hover:shadow-lg sm:w-auto"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-sky-200 bg-white/80 px-8 py-3.5 text-base font-semibold text-sky-700 backdrop-blur-sm transition-all hover:border-sky-300 hover:bg-sky-50 hover:shadow-lg sm:w-auto"
             >
               О магазине
             </Link>
@@ -77,7 +77,7 @@ export default function Home() {
       <section className="mx-auto max-w-6xl px-4 py-6 md:px-6 md:py-14">
         <ScrollReveal>
           <div className="mb-4 text-center">
-            <p className="mb-2 text-sm font-medium tracking-widest text-zinc-400 uppercase md:text-base">
+            <p className="mb-2 text-sm font-medium tracking-widest text-slate-400 uppercase md:text-base">
               Категории
             </p>
             <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
@@ -96,10 +96,10 @@ export default function Home() {
                 <span className="mb-2 text-4xl transition-transform duration-300 group-hover:scale-110 md:mb-3 md:text-6xl">
                   {cat.emoji}
                 </span>
-                <h3 className="mb-0.5 text-sm font-semibold text-zinc-900 md:text-base">
+                <h3 className="mb-0.5 text-sm font-semibold text-slate-800 md:text-base">
                   {cat.name}
                 </h3>
-                <p className="hidden text-sm text-zinc-500 sm:block">{cat.desc}</p>
+                <p className="hidden text-sm text-slate-500 sm:block">{cat.desc}</p>
               </Link>
             </ScrollReveal>
           ))}
@@ -107,12 +107,12 @@ export default function Home() {
       </section>
 
       {/* ПОПУЛЯРНЫЕ ТОВАРЫ */}
-      <section className="bg-zinc-50/50 py-14 md:py-20">
+      <section className="bg-sky-50/30 py-14 md:py-20">
         <div className="mx-auto max-w-6xl px-4 md:px-6">
           <ScrollReveal>
             <div className="mb-8 flex items-end justify-between md:mb-10">
               <div>
-                <p className="mb-1 text-sm font-medium tracking-widest text-zinc-400 uppercase md:mb-2 md:text-base">
+                <p className="mb-1 text-sm font-medium tracking-widest text-slate-400 uppercase md:mb-2 md:text-base">
                   Хиты продаж
                 </p>
                 <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
@@ -121,7 +121,7 @@ export default function Home() {
               </div>
               <Link
                 href="/catalog"
-                className="hidden text-base text-zinc-400 transition-colors hover:text-zinc-900 sm:block"
+                className="hidden text-base text-slate-400 transition-colors hover:text-slate-800 sm:block"
               >
                 Все товары →
               </Link>
@@ -140,7 +140,7 @@ export default function Home() {
             <div className="mt-8 text-center sm:hidden">
               <Link
                 href="/catalog"
-                className="inline-flex items-center gap-1 text-sm text-zinc-400 transition-colors hover:text-zinc-900"
+                className="inline-flex items-center gap-1 text-sm text-slate-400 transition-colors hover:text-slate-800"
               >
                 Все товары →
               </Link>
@@ -161,12 +161,12 @@ export default function Home() {
             <h2 className="mb-3 text-3xl font-bold tracking-tight md:mb-4 md:text-4xl">
               Не знаете, что выбрать?
             </h2>
-            <p className="mb-6 text-lg text-zinc-500 md:mb-8 md:text-xl">
+            <p className="mb-6 text-lg text-slate-500 md:mb-8 md:text-xl">
               Загляните в каталог — там точно есть то, что вызовет улыбку.
             </p>
             <Link
               href="/catalog"
-              className="inline-flex items-center gap-2 rounded-full bg-zinc-900 px-8 py-3.5 text-sm font-medium text-white transition-all hover:bg-zinc-700 hover:shadow-lg hover:shadow-zinc-900/20"
+              className="inline-flex items-center gap-2 rounded-full bg-sky-500 px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-sky-500/20 transition-all hover:bg-sky-600 hover:shadow-xl hover:shadow-sky-500/30"
             >
               Перейти в каталог →
             </Link>
