@@ -18,9 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru" className="h-full antialiased" style={{ colorScheme: "light" }}>
-      <body className="flex min-h-full flex-col bg-white text-zinc-900">
+      <body className="flex min-h-full flex-col bg-white text-slate-800">
         <CartProvider>
-          <header className="sticky top-0 z-50 border-b border-zinc-100 bg-white/80 backdrop-blur-md">
+          <header className="sticky top-0 z-50 border-b border-sky-100/60 bg-white/80 backdrop-blur-md">
             <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6 md:py-4">
               <Link href="/" className="flex items-center gap-2">
                 <Image
@@ -30,22 +30,21 @@ export default function RootLayout({
                   height={32}
                   className="md:h-9 md:w-9"
                 />
-                <span className="text-lg font-semibold tracking-tight md:text-xl">
+                <span className="text-lg font-bold tracking-tight text-sky-700 md:text-xl">
                   ToyShop
                 </span>
               </Link>
 
-              {/* Desktop nav */}
               <nav className="hidden items-center gap-8 text-base md:flex">
                 <Link
                   href="/catalog"
-                  className="text-zinc-500 transition-colors hover:text-zinc-900"
+                  className="font-medium text-slate-500 transition-colors hover:text-sky-600"
                 >
                   Каталог
                 </Link>
                 <Link
                   href="/about"
-                  className="text-zinc-500 transition-colors hover:text-zinc-900"
+                  className="font-medium text-slate-500 transition-colors hover:text-sky-600"
                 >
                   О нас
                 </Link>
@@ -53,7 +52,6 @@ export default function RootLayout({
 
               <div className="flex items-center gap-1">
                 <CartIcon />
-                {/* Mobile nav */}
                 <MobileMenu />
               </div>
             </div>
@@ -61,8 +59,8 @@ export default function RootLayout({
 
           <main className="flex-1">{children}</main>
 
-          <footer className="border-t border-zinc-100">
-            <div className="mx-auto flex max-w-6xl items-center justify-center gap-2 px-6 py-8 text-sm text-zinc-400">
+          <footer className="border-t border-sky-100/60 bg-sky-50/30">
+            <div className="mx-auto flex max-w-6xl items-center justify-center gap-2 px-6 py-8 text-sm text-slate-400">
               <Image
                 src="/logo.svg"
                 alt="ToyShop"

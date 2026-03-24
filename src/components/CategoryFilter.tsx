@@ -15,7 +15,6 @@ export default function CategoryFilter({ products }: { products: Product[] }) {
 
   return (
     <>
-      {/* Горизонтальный скролл на мобилке */}
       <div className="scrollbar-hide -mx-4 mb-6 overflow-x-auto px-4 md:mx-0 md:mb-10 md:px-0">
         <div className="flex gap-2 pb-2 md:flex-wrap md:pb-0">
           {categories.map((cat) => (
@@ -24,8 +23,8 @@ export default function CategoryFilter({ products }: { products: Product[] }) {
               onClick={() => setActive(cat)}
               className={`shrink-0 cursor-pointer whitespace-nowrap rounded-full px-5 py-2.5 text-sm transition-all md:text-base ${
                 active === cat
-                  ? "bg-zinc-900 font-medium text-white"
-                  : "bg-zinc-100 text-zinc-600 hover:bg-zinc-200"
+                  ? "bg-sky-500 font-semibold text-white shadow-md shadow-sky-500/20"
+                  : "bg-sky-50 text-slate-600 hover:bg-sky-100"
               }`}
             >
               {cat}
