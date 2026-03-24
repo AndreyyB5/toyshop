@@ -33,7 +33,7 @@ export default function RootLayout({
             </Link>
 
             {/* Desktop nav */}
-            <nav className="hidden items-center gap-8 text-sm md:flex">
+            <nav className="hidden items-center gap-8 text-base md:flex">
               <Link
                 href="/catalog"
                 className="text-zinc-500 transition-colors hover:text-zinc-900"
@@ -56,7 +56,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
 
         <footer className="border-t border-zinc-100">
-          <div className="mx-auto flex max-w-6xl items-center justify-center gap-2 px-6 py-8 text-xs text-zinc-400">
+          <div className="mx-auto flex max-w-6xl items-center justify-center gap-2 px-6 py-8 text-sm text-zinc-400">
             <Image
               src="/logo.svg"
               alt="ToyShop"

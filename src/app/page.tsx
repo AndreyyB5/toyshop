@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { products } from "@/data/products";
 import ProductCard from "@/components/ProductCard";
@@ -45,26 +44,14 @@ export default function Home() {
           <div className="animate-pulse-glow absolute bottom-0 right-1/4 h-[200px] w-[200px] rounded-full bg-pink-100/30 blur-3xl md:h-[300px] md:w-[300px]" style={{ animationDelay: "4s" }} />
         </div>
 
-        <div className="relative mx-auto max-w-6xl px-4 pb-14 pt-16 text-center md:px-6 md:pb-24 md:pt-32">
-          {/* Плавающий логотип */}
-          <div className="animate-float mx-auto mb-6 md:mb-8">
-            <Image
-              src="/logo.svg"
-              alt="ToyShop"
-              width={100}
-              height={100}
-              className="h-16 w-16 md:h-[100px] md:w-[100px]"
-              priority
-            />
-          </div>
-
+        <div className="relative mx-auto max-w-6xl px-4 pb-10 pt-10 text-center md:px-6 md:pb-20 md:pt-24">
           {/* Заголовок с градиентом */}
-          <h1 className="mx-auto mb-4 max-w-3xl text-3xl font-bold leading-[1.1] tracking-tight sm:text-4xl md:mb-6 md:text-7xl">
+          <h1 className="mx-auto mb-4 max-w-3xl text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl md:mb-6 md:text-7xl">
             Игрушки, с которыми{" "}
             <span className="animate-gradient-text">хочется расти</span>
           </h1>
 
-          <p className="mx-auto mb-8 max-w-md px-4 text-base text-zinc-500 md:mb-10 md:text-lg">
+          <p className="mx-auto mb-8 max-w-md px-4 text-lg text-zinc-500 md:mb-10 md:text-xl">
             Качественные и безопасные игрушки для детей всех возрастов.
             Доставка по всей Европе.
           </p>
@@ -72,13 +59,13 @@ export default function Home() {
           <div className="flex flex-col items-center gap-3 px-4 sm:flex-row sm:justify-center sm:gap-4">
             <Link
               href="/catalog"
-              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-zinc-900 px-8 py-3.5 text-sm font-medium text-white transition-all hover:bg-zinc-700 hover:shadow-lg hover:shadow-zinc-900/20 sm:w-auto"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-zinc-900 px-8 py-3.5 text-base font-medium text-white transition-all hover:bg-zinc-700 hover:shadow-lg hover:shadow-zinc-900/20 sm:w-auto"
             >
               Смотреть каталог →
             </Link>
             <Link
               href="/about"
-              className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-zinc-200 bg-white/80 px-8 py-3.5 text-sm font-medium text-zinc-700 backdrop-blur-sm transition-all hover:border-zinc-300 hover:shadow-lg sm:w-auto"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-zinc-200 bg-white/80 px-8 py-3.5 text-base font-medium text-zinc-700 backdrop-blur-sm transition-all hover:border-zinc-300 hover:shadow-lg sm:w-auto"
             >
               О магазине
             </Link>
@@ -87,13 +74,13 @@ export default function Home() {
       </section>
 
       {/* BENTO GRID — категории */}
-      <section className="mx-auto max-w-6xl px-4 py-14 md:px-6 md:py-20">
+      <section className="mx-auto max-w-6xl px-4 py-6 md:px-6 md:py-14">
         <ScrollReveal>
           <div className="mb-4 text-center">
-            <p className="mb-2 text-xs font-medium tracking-widest text-zinc-400 uppercase md:text-sm">
+            <p className="mb-2 text-sm font-medium tracking-widest text-zinc-400 uppercase md:text-base">
               Категории
             </p>
-            <h2 className="text-2xl font-bold tracking-tight md:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
               Найдите идеальный подарок
             </h2>
           </div>
@@ -109,10 +96,10 @@ export default function Home() {
                 <span className="mb-2 text-4xl transition-transform duration-300 group-hover:scale-110 md:mb-3 md:text-6xl">
                   {cat.emoji}
                 </span>
-                <h3 className="mb-0.5 text-xs font-semibold text-zinc-900 md:text-sm">
+                <h3 className="mb-0.5 text-sm font-semibold text-zinc-900 md:text-base">
                   {cat.name}
                 </h3>
-                <p className="hidden text-xs text-zinc-500 sm:block">{cat.desc}</p>
+                <p className="hidden text-sm text-zinc-500 sm:block">{cat.desc}</p>
               </Link>
             </ScrollReveal>
           ))}
@@ -125,16 +112,16 @@ export default function Home() {
           <ScrollReveal>
             <div className="mb-8 flex items-end justify-between md:mb-10">
               <div>
-                <p className="mb-1 text-xs font-medium tracking-widest text-zinc-400 uppercase md:mb-2 md:text-sm">
+                <p className="mb-1 text-sm font-medium tracking-widest text-zinc-400 uppercase md:mb-2 md:text-base">
                   Хиты продаж
                 </p>
-                <h2 className="text-2xl font-bold tracking-tight md:text-4xl">
+                <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
                   Популярное
                 </h2>
               </div>
               <Link
                 href="/catalog"
-                className="hidden text-sm text-zinc-400 transition-colors hover:text-zinc-900 sm:block"
+                className="hidden text-base text-zinc-400 transition-colors hover:text-zinc-900 sm:block"
               >
                 Все товары →
               </Link>
@@ -171,10 +158,10 @@ export default function Home() {
 
         <ScrollReveal>
           <div className="relative mx-auto max-w-2xl px-4 text-center md:px-6">
-            <h2 className="mb-3 text-2xl font-bold tracking-tight md:mb-4 md:text-4xl">
+            <h2 className="mb-3 text-3xl font-bold tracking-tight md:mb-4 md:text-4xl">
               Не знаете, что выбрать?
             </h2>
-            <p className="mb-6 text-base text-zinc-500 md:mb-8 md:text-lg">
+            <p className="mb-6 text-lg text-zinc-500 md:mb-8 md:text-xl">
               Загляните в каталог — там точно есть то, что вызовет улыбку.
             </p>
             <Link

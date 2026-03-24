@@ -22,7 +22,7 @@ export default function CategoryFilter({ products }: { products: Product[] }) {
             <button
               key={cat}
               onClick={() => setActive(cat)}
-              className={`shrink-0 cursor-pointer whitespace-nowrap rounded-full px-4 py-2 text-xs transition-all md:text-sm ${
+              className={`shrink-0 cursor-pointer whitespace-nowrap rounded-full px-5 py-2.5 text-sm transition-all md:text-base ${
                 active === cat
                   ? "bg-zinc-900 font-medium text-white"
                   : "bg-zinc-100 text-zinc-600 hover:bg-zinc-200"

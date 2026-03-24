@@ -16,18 +16,18 @@ export default function ProductCard({ product }: { product: Product }) {
           />
         </div>
       </Link>
-      <div className="space-y-0.5 md:space-y-1">
-        <p className="text-[10px] text-zinc-400 md:text-xs">{product.category}</p>
+      <div className="space-y-1">
+        <p className="text-xs text-zinc-400 md:text-sm">{product.category}</p>
         <Link href={`/catalog/${product.id}`}>
-          <h3 className="text-xs font-medium text-zinc-900 md:text-sm">
+          <h3 className="text-sm font-medium text-zinc-900 md:text-base">
             {product.name}
           </h3>
         </Link>
         <div className="flex items-center justify-between pt-1">
-          <span className="text-xs font-semibold md:text-sm">
+          <span className="text-sm font-bold md:text-base">
             {product.price.toFixed(2)} €
           </span>
-          <button className="cursor-pointer rounded-full bg-zinc-900 px-3 py-1 text-[10px] font-medium text-white transition-colors hover:bg-zinc-700 md:px-4 md:py-1.5 md:text-xs">
+          <button className="cursor-pointer rounded-full bg-zinc-900 px-3.5 py-1.5 text-xs font-medium text-white transition-colors hover:bg-zinc-700 md:px-5 md:py-2 md:text-sm">
             В корзину
           </button>
         </div>
