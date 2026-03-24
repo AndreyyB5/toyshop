@@ -103,6 +103,16 @@ export default function ProductOptions({ product }: { product: Product }) {
       <div className="hidden md:block">
         <AddToCartButton product={cartProduct} size="lg" />
       </div>
+
+      {/* Mobile sticky bottom bar */}
+      <div className="fixed bottom-0 left-0 right-0 z-40 border-t border-sky-100 bg-white/95 px-4 py-3 backdrop-blur-md md:hidden">
+        <div className="flex items-center justify-between gap-3">
+          <span className="text-lg font-bold text-sky-700">
+            {currentPrice.toFixed(2)} €
+          </span>
+          <AddToCartButton product={cartProduct} size="lg" />
+        </div>
+      </div>
     </div>
   );
 }
