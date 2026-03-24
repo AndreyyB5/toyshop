@@ -17,7 +17,7 @@ export default function ProductCard({ product }: { product: Product }) {
       <Link href={`/catalog/${product.id}`}>
         <div className="relative mb-3 aspect-[4/5] overflow-hidden rounded-xl bg-sky-50 md:mb-4 md:rounded-2xl">
           <Image
-            src={product.image}
+            src={product.images[0]}
             alt={product.name}
             fill
             className="object-cover transition-transform duration-500 group-hover:scale-105"

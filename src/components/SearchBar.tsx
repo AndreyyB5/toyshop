@@ -76,7 +76,7 @@ export default function SearchBar() {
                 >
                   <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-lg bg-sky-50">
                     <Image
-                      src={product.image}
+                      src={product.images[0]}
                       alt={product.name}
                       fill
                       className="object-cover"

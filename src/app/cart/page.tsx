@@ -49,7 +49,7 @@ export default function CartPage() {
                 className="relative h-24 w-24 shrink-0 overflow-hidden rounded-xl bg-sky-50 md:h-32 md:w-32"
               >
                 <Image
-                  src={product.image}
+                  src={product.images[0]}
                   alt={product.name}
                   fill
                   className="object-cover"
