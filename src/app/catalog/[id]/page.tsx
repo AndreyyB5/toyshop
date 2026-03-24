@@ -3,6 +3,7 @@ import Image from "next/image";
 import { products } from "@/data/products";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ProductCard from "@/components/ProductCard";
+import AddToCartButton from "@/components/AddToCartButton";
 
 export function generateStaticParams() {
   return products.map((product) => ({ id: String(product.id) }));
@@ -63,9 +64,9 @@ export default async function ProductPage({
               {product.price.toFixed(2)} €
             </p>
             {/* Desktop button */}
-            <button className="hidden w-full cursor-pointer rounded-full bg-zinc-900 px-8 py-4 text-base font-medium text-white transition-all hover:bg-zinc-700 hover:shadow-lg hover:shadow-zinc-900/20 md:block md:w-auto">
-              Добавить в корзину
-            </button>
+            <div className="hidden md:block">
+              <AddToCartButton product={product} size="lg" />
+            </div>
           </div>
         </div>
 
@@ -89,9 +90,7 @@ export default async function ProductPage({
             <p className="text-xs text-zinc-500">{product.name}</p>
             <p className="text-lg font-bold">{product.price.toFixed(2)} €</p>
           </div>
-          <button className="cursor-pointer rounded-full bg-zinc-900 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-zinc-700">
-            В корзину
-          </button>
+          <AddToCartButton product={product} />
         </div>
       </div>
     </>

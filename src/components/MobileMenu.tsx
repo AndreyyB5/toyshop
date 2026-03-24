@@ -69,6 +69,13 @@ export default function MobileMenu() {
           >
             О нас
           </Link>
+          <Link
+            href="/cart"
+            onClick={() => setOpen(false)}
+            className="rounded-xl px-4 py-3 text-lg font-medium text-zinc-900 transition-colors hover:bg-zinc-50"
+          >
+            Корзина
+          </Link>
         </nav>
 
         <div className="mt-auto pb-8">

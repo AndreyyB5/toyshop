@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Product } from "@/data/products";
+import AddToCartButton from "@/components/AddToCartButton";
 
 export default function ProductCard({ product }: { product: Product }) {
   return (
@@ -27,9 +28,7 @@ export default function ProductCard({ product }: { product: Product }) {
           <span className="text-sm font-bold md:text-base">
             {product.price.toFixed(2)} €
           </span>
-          <button className="cursor-pointer rounded-full bg-zinc-900 px-3.5 py-1.5 text-xs font-medium text-white transition-colors hover:bg-zinc-700 md:px-5 md:py-2 md:text-sm">
-            В корзину
-          </button>
+          <AddToCartButton product={product} />
         </div>
       </div>
     </div>
