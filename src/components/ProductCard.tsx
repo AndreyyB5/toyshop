@@ -3,7 +3,15 @@ import Link from "next/link";
 import { Product } from "@/data/products";
 import AddToCartButton from "@/components/AddToCartButton";
 
+const badgeConfig = {
+  new: { label: "Новинка", className: "bg-emerald-400 text-white" },
+  hit: { label: "Хит", className: "bg-amber-400 text-white" },
+  sale: { label: "Скидка", className: "bg-rose-400 text-white" },
+};
+
 export default function ProductCard({ product }: { product: Product }) {
+  const badge = product.badge ? badgeConfig[product.badge] : null;
+
   return (
     <div className="group">
       <Link href={`/catalog/${product.id}`}>
@@ -15,6 +23,13 @@ export default function ProductCard({ product }: { product: Product }) {
             className="object-cover transition-transform duration-500 group-hover:scale-105"
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 25vw"
           />
+          {badge && (
+            <span
+              className={`absolute left-2 top-2 rounded-full px-2.5 py-1 text-[10px] font-bold shadow-sm md:left-3 md:top-3 md:text-xs ${badge.className}`}
+            >
+              {badge.label}
+            </span>
+          )}
         </div>
       </Link>
       <div className="space-y-1">

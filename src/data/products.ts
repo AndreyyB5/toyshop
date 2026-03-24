@@ -5,6 +5,7 @@ export interface Product {
   image: string;
   category: string;
   description: string;
+  badge?: "new" | "hit" | "sale";
 }
 
 export const products: Product[] = [
@@ -14,6 +15,7 @@ export const products: Product[] = [
     price: 24.99,
     image: "https://images.unsplash.com/photo-1533859583213-c4e11b597ee0?w=600&h=600&fit=crop",
     category: "Мягкие игрушки",
+    badge: "hit",
     description:
       "Большой плюшевый медведь из мягкого гипоаллергенного материала. Идеальный друг для сна и игр. Подходит для детей от 1 года.",
   },
@@ -23,6 +25,7 @@ export const products: Product[] = [
     price: 39.99,
     image: "https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=600&h=600&fit=crop",
     category: "Конструкторы",
+    badge: "new",
     description:
       "Набор из 250 деталей для постройки средневекового замка. Развивает мелкую моторику и пространственное мышление. Для детей от 6 лет.",
   },
@@ -32,6 +35,7 @@ export const products: Product[] = [
     price: 19.99,
     image: "https://images.unsplash.com/photo-1703925153100-43afda8b6506?w=600&h=600&fit=crop",
     category: "Настольные игры",
+    badge: "sale",
     description:
       "Упрощённая версия классической игры для самых маленьких. Яркие карточки и простые правила. Для 2-4 игроков от 5 лет.",
   },
@@ -59,6 +63,7 @@ export const products: Product[] = [
     price: 34.99,
     image: "https://images.unsplash.com/photo-1546776230-bb86256870ce?w=600&h=600&fit=crop",
     category: "Конструкторы",
+    badge: "hit",
     description:
       "Собери своего робота из 180 деталей. Подвижные руки и ноги, светящиеся глаза. Для юных инженеров от 7 лет.",
   },
@@ -77,6 +82,7 @@ export const products: Product[] = [
     price: 32.99,
     image: "https://images.unsplash.com/photo-1552899167-d0b2887ca549?w=600&h=600&fit=crop",
     category: "Куклы",
+    badge: "new",
     description:
       "Интерактивная кукла, которая умеет говорить 20 фраз. В комплекте коляска и набор посуды. Для детей от 3 лет.",
   },
