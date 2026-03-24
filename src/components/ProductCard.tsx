@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Product } from "@/data/products";
@@ -11,21 +14,25 @@ const badgeConfig = {
 
 export default function ProductCard({ product }: { product: Product }) {
   const badge = product.badge ? badgeConfig[product.badge] : null;
+  const [loaded, setLoaded] = useState(false);
 
   return (
-    <div className="group">
+    <div className="group transition-transform duration-300 hover:-translate-y-1">
       <Link href={`/catalog/${product.id}`}>
         <div className="relative mb-3 aspect-[4/5] overflow-hidden rounded-xl bg-sky-50 md:mb-4 md:rounded-2xl">
+          {!loaded && <div className="skeleton absolute inset-0 z-10" />}
           <Image
             src={product.images[0]}
             alt={product.name}
             fill
             className="object-cover transition-transform duration-500 group-hover:scale-105"
+            style={{ opacity: loaded ? 1 : 0 }}
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 25vw"
+            onLoad={() => setLoaded(true)}
           />
           {badge && (
             <span
-              className={`absolute left-2 top-2 rounded-full px-2.5 py-1 text-[10px] font-bold shadow-sm md:left-3 md:top-3 md:text-xs ${badge.className}`}
+              className={`absolute left-2 top-2 z-20 rounded-full px-2.5 py-1 text-[10px] font-bold shadow-sm md:left-3 md:top-3 md:text-xs ${badge.className}`}
             >
               {badge.label}
             </span>

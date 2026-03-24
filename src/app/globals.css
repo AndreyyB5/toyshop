@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
 @import "tailwindcss";
 
 body {
@@ -7,7 +8,9 @@ body {
     "Helvetica Neue", Arial, sans-serif;
 }
 
-h1, h2 {
+/* Игровой шрифт для заголовков */
+h1, h2, h3 {
+  font-family: "Nunito", -apple-system, sans-serif;
   text-wrap: balance;
 }
 
@@ -107,4 +110,16 @@ input[type="number"] {
 
 .animate-pop-in {
   animation: pop-in 0.3s ease-out;
+}
+
+/* Скелетон */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #e0f2fe 25%, #f0f9ff 50%, #e0f2fe 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
 }
