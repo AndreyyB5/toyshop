@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CartProvider } from "@/context/CartContext";
 import CartIcon from "@/components/CartIcon";
+import SearchBar from "@/components/SearchBar";
 import MobileMenu from "@/components/MobileMenu";
 import "./globals.css";
 
@@ -61,7 +62,8 @@ export default function RootLayout({
                 </Link>
               </nav>
 
-              <div className="flex items-center gap-1">
+              <div className="flex items-center gap-2">
+                <SearchBar />
                 <CartIcon />
                 <MobileMenu />
               </div>
