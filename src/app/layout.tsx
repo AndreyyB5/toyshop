@@ -8,7 +8,18 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "ToyShop — Магазин игрушек",
-  description: "Лучшие игрушки для ваших детей",
+  description: "Качественные и безопасные игрушки для детей всех возрастов. Доставка по всей Европе.",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  openGraph: {
+    title: "ToyShop — Магазин игрушек",
+    description: "Качественные и безопасные игрушки для детей всех возрастов. Доставка по всей Европе.",
+    siteName: "ToyShop",
+    locale: "ru_RU",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
