@@ -1,32 +1,36 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Product } from "@/data/products";
 
 export default function ProductCard({ product }: { product: Product }) {
   return (
-    <div className="group rounded-2xl border border-gray-200 bg-white p-4 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
-      <div className="relative mb-4 aspect-square overflow-hidden rounded-xl bg-gray-100">
-        <Image
-          src={product.image}
-          alt={product.name}
-          fill
-          className="object-cover"
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-        />
-      </div>
-      <p className="mb-1 text-sm text-gray-500">{product.category}</p>
-      <h3 className="mb-1 text-lg font-semibold text-gray-900">
-        {product.name}
-      </h3>
-      <p className="mb-4 text-sm text-gray-600 line-clamp-2">
-        {product.description}
-      </p>
-      <div className="flex items-center justify-between">
-        <span className="text-xl font-bold text-gray-900">
-          {product.price.toFixed(2)} €
-        </span>
-        <button className="cursor-pointer rounded-full bg-indigo-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-indigo-700">
-          В корзину
-        </button>
+    <div className="group">
+      <Link href={`/catalog/${product.id}`}>
+        <div className="relative mb-3 aspect-[4/5] overflow-hidden rounded-xl bg-zinc-100 md:mb-4 md:rounded-2xl">
+          <Image
+            src={product.image}
+            alt={product.name}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 25vw"
+          />
+        </div>
+      </Link>
+      <div className="space-y-0.5 md:space-y-1">
+        <p className="text-[10px] text-zinc-400 md:text-xs">{product.category}</p>
+        <Link href={`/catalog/${product.id}`}>
+          <h3 className="text-xs font-medium text-zinc-900 md:text-sm">
+            {product.name}
+          </h3>
+        </Link>
+        <div className="flex items-center justify-between pt-1">
+          <span className="text-xs font-semibold md:text-sm">
+            {product.price.toFixed(2)} €
+          </span>
+          <button className="cursor-pointer rounded-full bg-zinc-900 px-3 py-1 text-[10px] font-medium text-white transition-colors hover:bg-zinc-700 md:px-4 md:py-1.5 md:text-xs">
+            В корзину
+          </button>
+        </div>
       </div>
     </div>
   );
